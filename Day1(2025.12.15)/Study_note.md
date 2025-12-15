@@ -17,7 +17,7 @@ cluster scope 와 namespace scope가 있는데, cluster scope는 전역변수에
 
 관리자 계정은 cluster scope 까지 관리가 가능하고, 일반 계정은 본인이 만든 앱에 한정된 namespace내에서 관리가 가능하다.
 
-### 시험에 나오는 문제
+#### 시험에 나오는 문제
 db pod 가 죽었을 때, 살려보시오
 
 1) 살리기
@@ -53,10 +53,12 @@ spec:
 2) oc create -f apache-service.yaml
 
 
+
 #### oc apply와 oc create의 차이점
 
 oc create 명령어를 쓰면, 전부 다 변경하므로 일부를 변경하고 싶으면
 oc apply -f apache-service.yaml 을 사용해야한다. 
+
 
 
 #### yaml 파일 작성시 문법이 헷갈리면 아래 명령어 사용하면 됨.
@@ -66,4 +68,21 @@ oc explain service.spec
 
 
 live resource 는 edit 으로 본다
+
+patch 는 live resource상태에서 바로 변경이 가능하고, 환경변수를 비롯한 거의 모든 값을 변경 가능하다.
+내용이 많으면, 변경사항을 파일로 만들어서 적용도 가능하다.
+
+
+rollout 은 pod를 강제로 배포하는 것.
+
+
+#### 자원 삭제하는 명령어
+
+oc delete pod --all
+oc delete deployment hello-openshift
+oc get deployment
+
+
+#### HOME디렉토리 확인하는 법
+echo $HOME
 
