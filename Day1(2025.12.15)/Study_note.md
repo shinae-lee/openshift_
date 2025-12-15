@@ -18,13 +18,46 @@ cluster scope 와 namespace scope가 있는데, cluster scope는 전역변수에
 ### 시험에 나오는 문제
 db pod 가 죽었을 때, 살려보시오
 
-1)살리기
+1) 살리기
 kubectl set env deployment/db-pod \
   MYSQL_USER='user1' \
   MYSQL_PASSWORD='*******' \
   MYSQL_DATABASE='items'
 
+여기서 set env 는 환경설정하는 명령어이다.
+
 2) 확인(STATUS = RUNNING 여부)
 oc get po
 
 
+#### 프로젝트 생성 후, 클러스터 외부에서 접속하고 싶을 때
+
+같은 cluster 내부에서는 curl 명령어로 pod에 접속이됨.
+외부에서 접속하려면, apache_service.yaml을 따로 만들어야함.
+
+1) vim apache_service.yaml
+
+[apache_service.yaml 내용]
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: apache-service
+spec:
+  ports:
+    - port: 8080
+
+
+2) oc create -f apache-service.yaml
+
+
+#### oc apply와 oc create의 차이점
+
+oc create 명령어를 쓰면, 전부 다 변경하므로 일부를 변경하고 싶으면
+oc apply -f apache-service.yaml 을 사용해야한다. 
+
+
+#### yaml 파일 작성시 문법이 헷갈리면 아래 명령어 사용하면 됨.
+
+oc explain svc 
+oc explain service.spec
