@@ -8,6 +8,7 @@ Red Hat OpenShift Administration II: Operating a Production Kubernetes Cluster (
 - [day1 - 1.declarative resource manifest](https://github.com/shinae-lee/openshift_/blob/main/Day1(2025.12.15)/1.resource%20manifest.md)
 - [day1 - 2.Kustomize overlay](https://github.com/shinae-lee/openshift_/blob/main/Day1(2025.12.15)/2.Kustomize%20overlay.md)
 - [day1 - 3.Package application deploy](https://github.com/shinae-lee/openshift_/blob/main/Day1(2025.12.15)/3.Package%20application%20%EB%B0%B0%ED%8F%AC.md)
+- [day1 - 4.Helm chart](https://github.com/shinae-lee/openshift_/blob/main/Day1(2025.12.15)/3.Package%20application%20%EB%B0%B0%ED%8F%AC.md)
 
 
 ### 📕 공부하며 정리한 자료들
