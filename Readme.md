@@ -10,3 +10,5 @@ Red Hat OpenShift Administration II: Operating a Production Kubernetes Cluster (
 - [day2 - 5.Authentication and Authorization](https://github.com/shinae-lee/openshift_/blob/main/Day2(2025.12.16)/5.Authentication%20and%20Authorization.md)
 - [day2 - 6.RBAC](https://github.com/shinae-lee/openshift_/blob/main/Day2(2025.12.16)/6.RBAC.md)
 - [day2 - 7.Network Security](https://github.com/shinae-lee/openshift_/blob/main/Day2(2025.12.16)/7.Networt%20Security.md)
+- [day3 - 8.Network Policy](https://github.com/shinae-lee/openshift_/blob/main/Day2(2025.12.16)/7.Networt%20Security.md)
+- [day3 - 9.Load Balancer Services](https://github.com/shinae-lee/openshift_/blob/main/Day2(2025.12.16)/7.Networt%20Security.md)
